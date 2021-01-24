@@ -107,6 +107,11 @@
     },
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
+    ],
+    "coverageReporters": [
+      "lcov",
+      "text",
+      "text-summary"
     ]
   },
   "setupFiles": [
