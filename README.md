@@ -13,8 +13,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Project Screen Shot(s)
 
-![app 1](https://github.com/MiltonTulli/bitso-test/blob/master/app1.png?raw=true)
-![app 2](https://github.com/MiltonTulli/bitso-test/blob/master/app2.png?raw=true)
+![app 1](https://github.com/MiltonTulli/bitso-test/blob/master/screenshots/app1.png)
+![app 2](https://github.com/MiltonTulli/bitso-test/blob/master/screenshots/app2.png)
 
 ## Folder Structure
 
@@ -57,7 +57,7 @@ Launches the test runner. It will generate a coverage report on the next locatio
 bitso-test/coverage/lcov-report/index.html
 ```
 
-![test coverage](https://github.com/MiltonTulli/bitso-test/blob/master/coverage.png?raw=true)
+![test coverage](https://github.com/MiltonTulli/bitso-test/blob/master/screenshots/coverage.png)
 
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
