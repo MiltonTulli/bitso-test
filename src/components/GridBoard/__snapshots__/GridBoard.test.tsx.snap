@@ -1,0 +1,385 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<GridBoard> Should match snapshot 1`] = `
+<div
+  className="root-0-2-1"
+>
+  <table
+    cellSpacing="0"
+    className=""
+  >
+    <tbody>
+      <tr
+        data-testid="row"
+      >
+        <td>
+          <div
+            className="root-0-2-2 root-d0-0-2-5 inactive-0-2-4"
+            data-testid="cell"
+            onClick={[Function]}
+          />
+        </td>
+        <td>
+          <div
+            className="root-0-2-2 root-d1-0-2-6 inactive-0-2-4"
+            data-testid="cell"
+            onClick={[Function]}
+          />
+        </td>
+        <td>
+          <div
+            className="root-0-2-2 root-d2-0-2-7 inactive-0-2-4"
+            data-testid="cell"
+            onClick={[Function]}
+          />
+        </td>
+        <td>
+          <div
+            className="root-0-2-2 root-d3-0-2-8 inactive-0-2-4"
+            data-testid="cell"
+            onClick={[Function]}
+          />
+        </td>
+        <td>
+          <div
+            className="root-0-2-2 root-d4-0-2-9 inactive-0-2-4"
+            data-testid="cell"
+            onClick={[Function]}
+          />
+        </td>
+        <td>
+          <div
+            className="root-0-2-2 root-d5-0-2-10 inactive-0-2-4"
+            data-testid="cell"
+            onClick={[Function]}
+          />
+        </td>
+        <td>
+          <div
+            className="root-0-2-2 root-d6-0-2-11 inactive-0-2-4"
+            data-testid="cell"
+            onClick={[Function]}
+          />
+        </td>
+        <td>
+          <div
+            className="root-0-2-2 root-d7-0-2-12 inactive-0-2-4"
+            data-testid="cell"
+            onClick={[Function]}
+          />
+        </td>
+        <td>
+          <div
+            className="root-0-2-2 root-d8-0-2-13 inactive-0-2-4"
+            data-testid="cell"
+            onClick={[Function]}
+          />
+        </td>
+        <td>
+          <div
+            className="root-0-2-2 root-d9-0-2-14 inactive-0-2-4"
+            data-testid="cell"
+            onClick={[Function]}
+          />
+        </td>
+      </tr>
+      <tr
+        data-testid="row"
+      >
+        <td>
+          <div
+            className="root-0-2-2 root-d10-0-2-15 inactive-0-2-4"
+            data-testid="cell"
+            onClick={[Function]}
+          />
+        </td>
+        <td>
+          <div
+            className="root-0-2-2 root-d11-0-2-16 inactive-0-2-4"
+            data-testid="cell"
+            onClick={[Function]}
+          />
+        </td>
+        <td>
+          <div
+            className="root-0-2-2 root-d12-0-2-17 inactive-0-2-4"
+            data-testid="cell"
+            onClick={[Function]}
+          />
+        </td>
+        <td>
+          <div
+            className="root-0-2-2 root-d13-0-2-18 inactive-0-2-4"
+            data-testid="cell"
+            onClick={[Function]}
+          />
+        </td>
+        <td>
+          <div
+            className="root-0-2-2 root-d14-0-2-19 inactive-0-2-4"
+            data-testid="cell"
+            onClick={[Function]}
+          />
+        </td>
+        <td>
+          <div
+            className="root-0-2-2 root-d15-0-2-20 inactive-0-2-4"
+            data-testid="cell"
+            onClick={[Function]}
+          />
+        </td>
+        <td>
+          <div
+            className="root-0-2-2 root-d16-0-2-21 inactive-0-2-4"
+            data-testid="cell"
+            onClick={[Function]}
+          />
+        </td>
+        <td>
+          <div
+            className="root-0-2-2 root-d17-0-2-22 inactive-0-2-4"
+            data-testid="cell"
+            onClick={[Function]}
+          />
+        </td>
+        <td>
+          <div
+            className="root-0-2-2 root-d18-0-2-23 inactive-0-2-4"
+            data-testid="cell"
+            onClick={[Function]}
+          />
+        </td>
+        <td>
+          <div
+            className="root-0-2-2 root-d19-0-2-24 inactive-0-2-4"
+            data-testid="cell"
+            onClick={[Function]}
+          />
+        </td>
+      </tr>
+      <tr
+        data-testid="row"
+      >
+        <td>
+          <div
+            className="root-0-2-2 root-d20-0-2-25 inactive-0-2-4"
+            data-testid="cell"
+            onClick={[Function]}
+          />
+        </td>
+        <td>
+          <div
+            className="root-0-2-2 root-d21-0-2-26 inactive-0-2-4"
+            data-testid="cell"
+            onClick={[Function]}
+          />
+        </td>
+        <td>
+          <div
+            className="root-0-2-2 root-d22-0-2-27 inactive-0-2-4"
+            data-testid="cell"
+            onClick={[Function]}
+          />
+        </td>
+        <td>
+          <div
+            className="root-0-2-2 root-d23-0-2-28 inactive-0-2-4"
+            data-testid="cell"
+            onClick={[Function]}
+          />
+        </td>
+        <td>
+          <div
+            className="root-0-2-2 root-d24-0-2-29 inactive-0-2-4"
+            data-testid="cell"
+            onClick={[Function]}
+          />
+        </td>
+        <td>
+          <div
+            className="root-0-2-2 root-d25-0-2-30 inactive-0-2-4"
+            data-testid="cell"
+            onClick={[Function]}
+          />
+        </td>
+        <td>
+          <div
+            className="root-0-2-2 root-d26-0-2-31 inactive-0-2-4"
+            data-testid="cell"
+            onClick={[Function]}
+          />
+        </td>
+        <td>
+          <div
+            className="root-0-2-2 root-d27-0-2-32 inactive-0-2-4"
+            data-testid="cell"
+            onClick={[Function]}
+          />
+        </td>
+        <td>
+          <div
+            className="root-0-2-2 root-d28-0-2-33 inactive-0-2-4"
+            data-testid="cell"
+            onClick={[Function]}
+          />
+        </td>
+        <td>
+          <div
+            className="root-0-2-2 root-d29-0-2-34 inactive-0-2-4"
+            data-testid="cell"
+            onClick={[Function]}
+          />
+        </td>
+      </tr>
+      <tr
+        data-testid="row"
+      >
+        <td>
+          <div
+            className="root-0-2-2 root-d30-0-2-35 inactive-0-2-4"
+            data-testid="cell"
+            onClick={[Function]}
+          />
+        </td>
+        <td>
+          <div
+            className="root-0-2-2 root-d31-0-2-36 inactive-0-2-4"
+            data-testid="cell"
+            onClick={[Function]}
+          />
+        </td>
+        <td>
+          <div
+            className="root-0-2-2 root-d32-0-2-37 inactive-0-2-4"
+            data-testid="cell"
+            onClick={[Function]}
+          />
+        </td>
+        <td>
+          <div
+            className="root-0-2-2 root-d33-0-2-38 inactive-0-2-4"
+            data-testid="cell"
+            onClick={[Function]}
+          />
+        </td>
+        <td>
+          <div
+            className="root-0-2-2 root-d34-0-2-39 inactive-0-2-4"
+            data-testid="cell"
+            onClick={[Function]}
+          />
+        </td>
+        <td>
+          <div
+            className="root-0-2-2 root-d35-0-2-40 inactive-0-2-4"
+            data-testid="cell"
+            onClick={[Function]}
+          />
+        </td>
+        <td>
+          <div
+            className="root-0-2-2 root-d36-0-2-41 inactive-0-2-4"
+            data-testid="cell"
+            onClick={[Function]}
+          />
+        </td>
+        <td>
+          <div
+            className="root-0-2-2 root-d37-0-2-42 inactive-0-2-4"
+            data-testid="cell"
+            onClick={[Function]}
+          />
+        </td>
+        <td>
+          <div
+            className="root-0-2-2 root-d38-0-2-43 inactive-0-2-4"
+            data-testid="cell"
+            onClick={[Function]}
+          />
+        </td>
+        <td>
+          <div
+            className="root-0-2-2 root-d39-0-2-44 inactive-0-2-4"
+            data-testid="cell"
+            onClick={[Function]}
+          />
+        </td>
+      </tr>
+      <tr
+        data-testid="row"
+      >
+        <td>
+          <div
+            className="root-0-2-2 root-d40-0-2-45 inactive-0-2-4"
+            data-testid="cell"
+            onClick={[Function]}
+          />
+        </td>
+        <td>
+          <div
+            className="root-0-2-2 root-d41-0-2-46 inactive-0-2-4"
+            data-testid="cell"
+            onClick={[Function]}
+          />
+        </td>
+        <td>
+          <div
+            className="root-0-2-2 root-d42-0-2-47 inactive-0-2-4"
+            data-testid="cell"
+            onClick={[Function]}
+          />
+        </td>
+        <td>
+          <div
+            className="root-0-2-2 root-d43-0-2-48 inactive-0-2-4"
+            data-testid="cell"
+            onClick={[Function]}
+          />
+        </td>
+        <td>
+          <div
+            className="root-0-2-2 root-d44-0-2-49 inactive-0-2-4"
+            data-testid="cell"
+            onClick={[Function]}
+          />
+        </td>
+        <td>
+          <div
+            className="root-0-2-2 root-d45-0-2-50 inactive-0-2-4"
+            data-testid="cell"
+            onClick={[Function]}
+          />
+        </td>
+        <td>
+          <div
+            className="root-0-2-2 root-d46-0-2-51 inactive-0-2-4"
+            data-testid="cell"
+            onClick={[Function]}
+          />
+        </td>
+        <td>
+          <div
+            className="root-0-2-2 root-d47-0-2-52 inactive-0-2-4"
+            data-testid="cell"
+            onClick={[Function]}
+          />
+        </td>
+        <td>
+          <div
+            className="root-0-2-2 root-d48-0-2-53 inactive-0-2-4"
+            data-testid="cell"
+            onClick={[Function]}
+          />
+        </td>
+        <td>
+          <div
+            className="root-0-2-2 root-d49-0-2-54 inactive-0-2-4"
+            data-testid="cell"
+            onClick={[Function]}
+          />
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;

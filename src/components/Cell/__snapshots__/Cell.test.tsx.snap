@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Cell> Should match snapshot 1`] = `
+<div
+  className="root-0-2-1 root-d0-0-2-4 inactive-0-2-3"
+  data-testid="cell"
+  onClick={[Function]}
+/>
+`;

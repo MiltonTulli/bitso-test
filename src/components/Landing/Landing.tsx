@@ -60,6 +60,11 @@ export const Landing: React.FunctionComponent<ILandingProps> = (props: ILandingP
           Go to App
         </button>
       </section>
+
+      {/* 
+      <Link className={classes.link} to={R.BOARD}>
+        <h4 className={classes.header}>Go to app</h4>
+      </Link> */}
     </div>
   );
 };
