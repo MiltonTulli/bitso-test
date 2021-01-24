@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Start> Should match snapshot 1`] = `
+<div
+  className="root-0-2-1"
+>
+  <section>
+    <div
+      className="icon-list"
+    >
+      <i
+        className="snes-jp-logo"
+      />
+    </div>
+    <h1
+      className="title"
+    >
+      Bitso js challenge
+    </h1>
+    <p>
+      ~ Milton Tulli ~
+       
+      <a
+        href="https://www.linkedin.com/in/miltontulli/"
+      >
+        <i
+          className="nes-icon linkedin is-small"
+        />
+      </a>
+    </p>
+  </section>
+  <section>
+    <div
+      className="nes-container with-title selectContainer-0-2-2"
+    >
+      <p
+        className="title"
+      >
+        Choose Board Size
+      </p>
+      <div
+        className="nes-select"
+      >
+        <select
+          data-testid="changeMatrixSize"
+          defaultValue="-1"
+          onChange={[Function]}
+        >
+          <option
+            disabled={true}
+            value="-1"
+          >
+            Select..
+          </option>
+          <option
+            value="5x5"
+          >
+            5x5
+          </option>
+          <option
+            value="10x5"
+          >
+            10x5
+          </option>
+          <option
+            value="10x10"
+          >
+            10x10
+          </option>
+          <option
+            value="15x10"
+          >
+            15x10
+          </option>
+          <option
+            value="15x15"
+          >
+            15x15
+          </option>
+          <option
+            value="20x20"
+          >
+            20x20
+          </option>
+        </select>
+      </div>
+    </div>
+  </section>
+  <section>
+    <button
+      className="nes-btn is-primary"
+      onClick={[Function]}
+      type="button"
+    >
+      Go to App
+    </button>
+  </section>
+</div>
+`;
