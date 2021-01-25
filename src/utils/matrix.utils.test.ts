@@ -1,4 +1,5 @@
 import * as utils from './matrix.utils';
+import { ICell } from '../interfaces';
 
 describe('Matrix Utils', () => {
   describe('createMatrix', () => {
@@ -28,6 +29,8 @@ describe('Matrix Utils', () => {
     });
   });
   describe('getIslands', () => {
+    // util to convert arr of ids into acive ones
+    const toActivePoints = (arr: string[]): ICell[] => arr.map(id => ({ id, active: true }));
     it('Should correct islands', () => {
       const props = [
         { id: '3-1', active: true },
@@ -113,6 +116,32 @@ describe('Matrix Utils', () => {
 
       const islandGroups = utils.getIslands(props);
       expect(islandGroups.length).toEqual(expectedGroupsResult.length);
+    });
+    it('Should correct islands', () => {
+      const arrOfPoints = [
+        { id: '3-1', active: true },
+        { id: '1-2', active: true },
+        { id: '2-2', active: true },
+        { id: '3-2', active: true }
+      ];
+      const expectResult = [['3-1', '1-2', '2-2', '3-2']];
+
+      const result = utils.getIslands(arrOfPoints);
+
+      expect(result).toStrictEqual(expectResult);
+      expect(result.length).toEqual(1);
+    });
+    it('Should correct islands', () => {
+      // Arrange
+      const arrOfPoints = toActivePoints(['1-3', '2-1', '2-2', '2-3']);
+      const expectResult = [['1-3', '2-1', '2-2', '2-3']];
+
+      // Action
+      const result = utils.getIslands(arrOfPoints);
+
+      // Asserts
+      expect(result).toStrictEqual(expectResult);
+      expect(result.length).toEqual(1);
     });
   });
   describe('getAristas', () => {

@@ -42,27 +42,15 @@ export const parseStringId = (id: string): number[] => {
  */
 export const getIslands = (activeCells: ICell[]): string[][] => {
   const activeIds: string[] = activeCells.map(cell => cell.id);
-  const result: string[][] = [];
-
+  let result: string[][] = [];
   activeIds.forEach(p1 => {
-    !result.some(group =>
-      group.some(p2 => {
-        if (isFamily(p1, p2)) {
-          group.push(p1);
-          return true;
-        }
-        if (isDiagonal(p1, p2)) {
-          const [ar1, ar2] = getAristas(p1, p2);
-          if (activeIds.some(p => p === ar1 || p === ar2)) {
-            group.push(p1);
-            return true;
-          }
-        }
-        return false;
-      })
-    ) && result.push([p1]);
+    const groups = result.filter(group => group.some(p2 => isFamily(p1, p2)));
+    if (groups.length) {
+      result = result.filter(r => !groups.some(g => g === r));
+      return result.push([...groups.flat(), p1]);
+    }
+    result.push([p1]);
   });
-
   return result;
 };
 
