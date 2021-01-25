@@ -42,30 +42,28 @@ export const parseStringId = (id: string): number[] => {
  */
 export const getIslands = (activeCells: ICell[]): string[][] => {
   const activeIds: string[] = activeCells.map(cell => cell.id);
-  let acum: string[][] = activeIds
-    .reduce((acc: any[], curr: string) => {
-      let newAcc = acc;
-      let currFamily: string[] = [];
-      for (let i = 0; i < acc.length; i++) {
-        let id = acc[i];
-        // if (curr && id && (isFamily(curr, id) || idHasFamilyOnArr(id, currFamily))) {
-        let isFam = isFamily(curr, id);
-        let hasfam = idHasFamilyOnArr(id, currFamily);
-        if (curr && id && (isFam || hasfam)) {
-          currFamily.push(id);
-          delete newAcc[i];
+  const result: string[][] = [];
+
+  activeIds.forEach(p1 => {
+    !result.some(group =>
+      group.some(p2 => {
+        if (isFamily(p1, p2)) {
+          group.push(p1);
+          return true;
         }
-      }
-      if (currFamily.length > 0) {
-        return [currFamily, ...newAcc];
-      } else {
-        return acc;
-      }
-    }, activeIds)
-    .filter(function(element) {
-      return element !== undefined;
-    });
-  return acum;
+        if (isDiagonal(p1, p2)) {
+          const [ar1, ar2] = getAristas(p1, p2);
+          if (activeIds.some(p => p === ar1 || p === ar2)) {
+            group.push(p1);
+            return true;
+          }
+        }
+        return false;
+      })
+    ) && result.push([p1]);
+  });
+
+  return result;
 };
 
 export const calculateCellSize = (
@@ -118,4 +116,30 @@ export const getActiveCells = (matrix: IMatrix): ICell[] => {
     }
   }
   return active;
+};
+/**
+ * Returns boolean whether two points are diagonally aligned;
+ * @param { String } idA
+ * @param { String } idB
+ */
+export const isDiagonal = (idA: string, idB: string): boolean => {
+  const [x, y] = parseStringId(idA);
+  return [
+    `${x - 1}-${+y - 1}`,
+    `${x - 1}-${+y + 1}`,
+    `${x + 1}-${+y + 1}`,
+    `${x + 1}-${+y - 1}`
+  ].some(e => idB === e);
+};
+/**
+ * Returns the edges of a diagonal
+ * @param { String } idA
+ * @param { String } idB
+ */
+export const getAristas = (idA: string, idB: string) => {
+  const [Ax, Ay] = parseStringId(idA);
+  const [Bx, By] = parseStringId(idB);
+  const simbolX = Bx - Ax;
+  const simbolY = By - Ay;
+  return [`${Ax + simbolX}-${Ay}`, `${Ax}-${Ay + simbolY}`];
 };

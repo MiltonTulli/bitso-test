@@ -40,6 +40,60 @@ describe('Matrix Utils', () => {
       expect(islandGroups.length).toEqual(1);
     });
     it('Should correct islands', () => {
+      const arrOfPoints = [
+        { id: '2-2', active: true },
+        { id: '5-2', active: true },
+        { id: '3-2', active: true },
+        { id: '3-3', active: true },
+        { id: '5-3', active: true }
+      ];
+      const expectResult = [
+        ['2-2', '3-2', '3-3'],
+        ['5-2', '5-3']
+      ];
+      const result = utils.getIslands(arrOfPoints);
+      expect(result).toStrictEqual(expectResult);
+    });
+    it('Should correct islands', () => {
+      const arrOfPoints = [
+        { id: '1-1', active: true },
+        { id: '2-1', active: true },
+        { id: '1-2', active: true },
+        { id: '3-2', active: true },
+        { id: '3-3', active: true },
+        { id: '4-3', active: true },
+        { id: '1-4', active: true },
+        { id: '2-4', active: true }
+      ];
+      const expectResult = [
+        ['1-1', '2-1', '1-2'],
+        ['3-2', '3-3', '4-3'],
+        ['1-4', '2-4']
+      ];
+      const result = utils.getIslands(arrOfPoints);
+      expect(result).toStrictEqual(expectResult);
+    });
+    it('Should correct islands', () => {
+      const props = [
+        { id: '0-0', active: true },
+        { id: '2-1', active: true },
+        { id: '1-2', active: true },
+        { id: '2-2', active: true }
+      ];
+      const islandGroups = utils.getIslands(props);
+      expect(islandGroups.length).toEqual(2);
+    });
+    it('Should correct islands', () => {
+      const arrOfPoints = [
+        { id: '2-1', active: true },
+        { id: '1-2', active: true },
+        { id: '2-2', active: true }
+      ];
+      const expectResult = [['2-1', '1-2', '2-2']];
+      const result = utils.getIslands(arrOfPoints);
+      expect(result).toStrictEqual(expectResult);
+    });
+    it('Should correct islands', () => {
       const props = [
         { id: '1-1', active: true },
         { id: '1-2', active: true },
@@ -59,9 +113,85 @@ describe('Matrix Utils', () => {
 
       const islandGroups = utils.getIslands(props);
       expect(islandGroups.length).toEqual(expectedGroupsResult.length);
-      expect(islandGroups[0]).toEqual(expectedGroupsResult[0]);
-      expect(islandGroups[1]).toEqual(expectedGroupsResult[1]);
-      expect(islandGroups[2]).toEqual(expectedGroupsResult[2]);
+    });
+  });
+  describe('getAristas', () => {
+    it('getAristas should return arista 1', () => {
+      // Arrange
+      const pointA = '2-2';
+      const pointB = '3-3';
+      const expectResult = ['3-2', '2-3'];
+
+      // Action
+      const result = utils.getAristas(pointA, pointB);
+
+      // Asserts
+      expect(result).toStrictEqual(expectResult);
+    });
+
+    it('getAristas should return arista 2', () => {
+      // Arrange
+      const pointA = '2-2';
+      const pointB = '1-1';
+      const expectResult = ['1-2', '2-1'];
+
+      // Action
+      const result = utils.getAristas(pointA, pointB);
+
+      // Asserts
+      expect(result).toStrictEqual(expectResult);
+    });
+
+    it('getAristas should return arista 3', () => {
+      // Arrange
+      const pointA = '2-2';
+      const pointB = '3-1';
+      const expectResult = ['3-2', '2-1'];
+
+      // Action
+      const result = utils.getAristas(pointA, pointB);
+
+      // Asserts
+      expect(result).toStrictEqual(expectResult);
+    });
+
+    it('getAristas should return arista 4', () => {
+      // Arrange
+      const pointA = '2-2';
+      const pointB = '1-3';
+      const expectResult = ['1-2', '2-3'];
+
+      // Action
+      const result = utils.getAristas(pointA, pointB);
+
+      // Asserts
+      expect(result).toStrictEqual(expectResult);
+    });
+
+    it('getAristas should return arista 5', () => {
+      // Arrange
+      const pointA = '2-2';
+      const pointB = '3-3';
+      const expectResult = ['3-2', '2-3'];
+
+      // Action
+      const result = utils.getAristas(pointA, pointB);
+
+      // Asserts
+      expect(result).toStrictEqual(expectResult);
+    });
+
+    it('getAristas should return arista 6', () => {
+      // Arrange
+      const pointA = '2-4';
+      const pointB = '3-3';
+      const expectResult = ['3-4', '2-3'];
+
+      // Action
+      const result = utils.getAristas(pointA, pointB);
+
+      // Asserts
+      expect(result).toStrictEqual(expectResult);
     });
   });
   describe('calculateCellSize', () => {
@@ -123,6 +253,20 @@ describe('Matrix Utils', () => {
       ];
 
       expect(activeCellsResult).toEqual(expectedResult);
+    });
+  });
+  describe('isDiagonal', () => {
+    it('Should return true', () => {
+      expect(utils.isDiagonal('2-2', '3-1')).toBe(true);
+      expect(utils.isDiagonal('3-1', '2-2')).toBe(true);
+      expect(utils.isDiagonal('6-1', '7-2')).toBe(true);
+      expect(utils.isDiagonal('7-2', '6-1')).toBe(true);
+    });
+    it('Should return false', () => {
+      expect(utils.isDiagonal('2-2', '2-1')).toBe(false);
+      expect(utils.isDiagonal('2-2', '3-2')).toBe(false);
+      expect(utils.isDiagonal('2-2', '4-2')).toBe(false);
+      expect(utils.isDiagonal('2-2', '5-1')).toBe(false);
     });
   });
 });
