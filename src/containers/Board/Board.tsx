@@ -19,14 +19,13 @@ interface IBoardmapDispatchToProps {
 }
 interface IBoardProps extends IBoardMapStateToProps, IBoardmapDispatchToProps {}
 
-export class Board extends React.Component<IBoardProps> {
+export class Board extends React.PureComponent<IBoardProps> {
   componentDidMount() {
     this.props.init();
   }
 
   toggleCellStatus = (id: string) => {
     this.props.toggleCell(id);
-    this.forceUpdate();
   };
 
   public render() {
